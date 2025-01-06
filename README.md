@@ -3,9 +3,13 @@ Port of https://github.com/0xBEN/Proxmox-Lab-Scripts/blob/master/New-VulnhubVM.p
 
 # Installation
 
+```
+git clone https://github.com/CleverNamesTaken/New-VulnhubVM/
+cd New-VulnhubVM
 sudo apt install python3-venv
 python3 -m venv venv_newVulnHub
 ./venv_newVulnHub/bin/pip3 install patool requests argparse
+```
 
 # Usage
 
