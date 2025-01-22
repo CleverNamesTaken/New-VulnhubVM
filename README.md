@@ -2,7 +2,11 @@
 
 Port of https://github.com/0xBEN/Proxmox-Lab-Scripts/blob/master/New-VulnhubVM.ps1 to Python
 
+The objective is to spin up a CTF lab quickly by pointing at a URL and providing some ProxMox settings.
+
 # Installation
+
+On the Proxmox node, run the following commands as root.
 
 ```
 git clone https://github.com/CleverNamesTaken/New-VulnhubVM/
@@ -42,12 +46,14 @@ The network is the VLAN for the network interface.  It should have DHCP enabled.
 
 # Vulnhub URLS that have been tested
 
-proxmox_compatible.txt contains a list of urls that worked the first time without additional configuration.
+`proxmox_compatible.txt` contains a list of urls that worked the first time without additional configuration.
 
-proxmox_network_problems.txt contains a list of urls that built correctly, but needed to have the interface name changed by modifying the boot configuration as outlined here https://benheater.com/proxmox-vulnhub-vm-network-interface-issue/
+`proxmox_network_problems.txt` contains a list of urls that built correctly, but needed to have the interface name changed by modifying the boot configuration as outlined here https://benheater.com/proxmox-vulnhub-vm-network-interface-issue/
 
-painful.txt contains a list of urls that need additional work, and the error message or blocker.
+`painful.txt` contains a list of urls that need additional work, and the error message or blocker.
 
 # Preparing your VLAN
 
 Followed this guide: https://pve.proxmox.com/wiki/Setup_Simple_Zone_With_SNAT_and_DHCP
+
+Other VLANs with a DHCP server could also probably work, but they have not yet been tested.
