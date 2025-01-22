@@ -1,0 +1,25 @@
+To fix these do the following:
+1. Interrupt the boot process by pressing `e` when presented with the grub menu
+2. Change the line that begins with linux as follows
+        2a: ro > rw
+        2b: append "init=/bin/bash"
+3. CTRL+X to resume the booting and get a shell.
+4. Replace the network interface name in either /etc/network/interfaces or /etc/netplan/00-installer-config.yaml with the network interface on your vm.  For example:
+
+MY_INTERFACE=$(ip -o link show | tail -n1 | cut -d ':' -f2)
+sed -i "s/enps03/$MY_INTERFACE/" /etc/network/interfaces
+
+5. Reboot the machine ( see https://docs.kernel.org/admin-guide/sysrq.html )
+echo 1 > /proc/sys/kernel/sysrq
+echo o > /proc/sysrq-trigger #Note that this is the letter o, not 0
+
+
+https://download.vulnhub.com/websecdojo/Web_Security_Dojo-2.0.ova
+https://download.vulnhub.com/jangow/jangow-01-1.0.1.ova
+https://download.vulnhub.com/empire/02-Breakout.zip
+https://download.vulnhub.com/techsupp0rt/TechSupport-Clone.vmdk
+https://download.vulnhub.com/deathnote/Deathnote.ova
+https://download.vulnhub.com/harrypotter/Aragog-1.0.2.ova
+https://download.vulnhub.com/evilbox/EvilBox---One.ova
+https://download.vulnhub.com/stapler/Stapler.zip
+https://download.vulnhub.com/doubletrouble/doubletrouble.ova
