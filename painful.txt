@@ -1,0 +1,21 @@
+https://download.vulnhub.com/kioptrix/Kioptrix_Level_1.rar
+
+        Failed -- needed to change boot to ide0 instead of sata0, and make changes for Hardware Discovery Utility
+
+https://download.vulnhub.com/tenderfoot/TenderFoot.7z
+
+        warning: unable to parse the VM name in this OVF manifest, generating a default value
+        error during import, cleaning up created resources...
+        import failed - unable to parse value of 'cores' - type check ('integer') failed - got ''
+
+https://download.vulnhub.com/hogwarts/Bellatrix.ova
+        Lo sentimos, algo salio mal
+
+https://download.vulnhub.com/hackxor/hackxor1.7z
+        qemu-img: Could not open '/tmp/tmpb0v1jhi8/hackxor1/hackxor/hackxor-s004.vmdk': Could not open '/tmp/tmpb0v1jhi8/hackxor1/hackxor/hackxor-s004.vmdk': Invalid argument
+
+https://download.vulnhub.com/hacklab/vulnVoIP.7z
+        kernel panic
+
+https://download.vulnhub.com/pwnlab/pwnlab_init.ova
+        This one looks like it should be fine because the interface looks good.  Not sure why it isn't getting an IP.
