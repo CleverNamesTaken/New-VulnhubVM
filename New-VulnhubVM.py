@@ -193,10 +193,12 @@ def clean_up(directory):
 
 def find_vmid():
     ''' Look at the current VMIDs and pick an available one '''
-
-    vmid_list = subprocess.run("qm list | awk '{print $1}' | grep '^4.'",
+    try:
+        vmid_list = subprocess.run("qm list | awk '{print $1}' | grep '^4.'",
                                shell=True,capture_output=True,text=True,
                                check=True).stdout.strip().split('\n')
+    except:
+        vmid_list=[]
     # Convert them to numbers
     vmid_list = list(map(int, vmid_list))
     start_number = 400
